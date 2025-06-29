@@ -1,0 +1,88 @@
+body {
+  background-color: #161616;
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+main {
+  min-width: 350px;
+  max-width: 1000px;
+  width: 70%;
+  margin: auto;
+}
+
+header {
+  margin: 80px 0 5px 0;
+}
+
+#header-desc {
+  margin: 40px 0 20px 0;
+}
+
+main > hr {
+  margin-bottom: 50px;
+}
+
+.book-div {
+  display: block;
+  min-height: 280px;
+  margin-bottom: 150px;
+  padding: 20px 20px 40px 20px;
+  background-color: #202020;
+  border-radius: 10px;
+}
+
+.page-cover {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.details {
+  color: #6b6b6b;
+  margin-bottom: 10px;
+}
+
+.emerald {
+  color: #2ecc71;
+}
+
+.blue {
+  color: #3498db;
+}
+
+.amber {
+  color: #f1c40f;
+}
+
+.orange {
+  color: #e67e22;
+}
+
+.red {
+  color: #e74c3c;
+}
+
+.read-notes {
+  float: right;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.read-notes:hover {
+  color: #5dade2;
+  text-decoration: underline;
+}
+
+.notes {
+  margin-top: 80px;
+}

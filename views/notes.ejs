@@ -1,0 +1,19 @@
+<%-include('partials/header.ejs')%>
+  <div class="book-div notes">
+    <img class="page-cover" src="https://covers.openlibrary.org/b/isbn/<%=book.ids[0].isbn%>-M.jpg" alt="Page cover">
+    <h1 class="book-title" onclick="this.closest('form').submit();" style="cursor: pointer;">
+      <%=book.title%>
+    </h1>
+    <h3 class="details">Date read: <%=book.date_read%>. My rating: 
+      <%if (book.rating >= 9) {%><strong class="emerald"><%=book.rating%></strong>/10</h3><%}%>
+      <%if (book.rating >= 7 && book.rating < 9) {%><strong class="blue"><%=book.rating%></strong>/10</h3><%}%>
+      <%if (book.rating >= 5 && book.rating < 7) {%><strong class="amber"><%=book.rating%></strong>/10</h3><%}%>
+      <%if (book.rating >= 3 && book.rating < 5) {%><strong class="orange"><%=book.rating%></strong>/10</h3><%}%>
+      <%if (book.rating < 3) {%><strong class="red"><%=book.rating%></strong>/10</h3><%}%>
+    <h3 class="details">ISBN: <%=book.ids[0].isbn%></h3>
+    <h3 class="long-summary"><%=book.summaries[0].long_summary%></h3>
+    <form action="/" method="get">
+      <h3 class="read-notes" onclick="this.closest('form').submit();" style="cursor: pointer;">Back</h3>
+    </form>
+  </div>
+<%-include('partials/footer.ejs')%>

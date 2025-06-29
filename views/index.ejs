@@ -1,0 +1,32 @@
+<%-include('partials/header.ejs') %>
+  <header>
+    <h1>Khaldon Naif</h1>
+    <h2>Books I've Read</h2>
+    <h3 id="header-desc">Tiny summary but detailed notes for each. Use the ISBN number to find it from your local library or anywhere else. This page will constantly update as I read more.</p>
+  </header>
+  <hr>
+
+  <% rows.forEach(item => { %>
+    <div class="book-div">
+      <img class="page-cover" src="https://covers.openlibrary.org/b/isbn/<%=item.ids[0].isbn%>-M.jpg" alt="Page cover">
+      <form action="/notes" method="post">
+        <input hidden name="book-id" value="<%=item.id%>">
+        <h1 class="book-title" onclick="this.closest('form').submit();" style="cursor: pointer;">
+          <%=item.title%>
+        </h1>
+      </form>
+      <h3 class="details">Date read: <%=item.date_read%>. My rating: 
+        <%if (item.rating >= 9) {%><strong class="emerald"><%=item.rating%></strong>/10</h3><%}%>
+        <%if (item.rating >= 7 && item.rating < 9) {%><strong class="blue"><%=item.rating%></strong>/10</h3><%}%>
+        <%if (item.rating >= 5 && item.rating < 7) {%><strong class="amber"><%=item.rating%></strong>/10</h3><%}%>
+        <%if (item.rating >= 3 && item.rating < 5) {%><strong class="orange"><%=item.rating%></strong>/10</h3><%}%>
+        <%if (item.rating < 3) {%><strong class="red"><%=item.rating%></strong>/10</h3><%}%>
+      <h3 class="details">ISBN: <%=item.ids[0].isbn%></h3>
+      <h3 class="short-summary"><%=item.summaries[0].short_summary%></h3>
+      <form action="/notes" method="post">
+        <input hidden name="book-id" value="<%=item.id%>">
+        <h3 class="read-notes" onclick="this.closest('form').submit();" style="cursor: pointer;">Read my notes</h3>
+      </form>
+    </div>
+  <%})%>
+<%-include('partials/footer.ejs')%>

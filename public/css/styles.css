@@ -86,3 +86,7 @@ main > hr {
 .notes {
   margin-top: 80px;
 }
+
+.short-summary, .long-summary {
+  color: #CCCCCC ;
+}

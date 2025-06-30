@@ -11,7 +11,7 @@
       <%if (book.rating >= 3 && book.rating < 5) {%><strong class="orange"><%=book.rating%></strong>/10</h3><%}%>
       <%if (book.rating < 3) {%><strong class="red"><%=book.rating%></strong>/10</h3><%}%>
     <h3 class="details">ISBN: <%=book.ids[0].isbn%></h3>
-    <h3 class="long-summary"><%=book.summaries[0].long_summary%></h3>
+    <h3 class="long-summary"><%-book.summaries[0].long_summary%></h3>
     <form action="/" method="get">
       <h3 class="read-notes" onclick="this.closest('form').submit();" style="cursor: pointer;">Back</h3>
     </form>

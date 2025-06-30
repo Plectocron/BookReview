@@ -22,7 +22,7 @@
         <%if (item.rating >= 3 && item.rating < 5) {%><strong class="orange"><%=item.rating%></strong>/10</h3><%}%>
         <%if (item.rating < 3) {%><strong class="red"><%=item.rating%></strong>/10</h3><%}%>
       <h3 class="details">ISBN: <%=item.ids[0].isbn%></h3>
-      <h3 class="short-summary"><%=item.summaries[0].short_summary%></h3>
+      <h3 class="short-summary"><%-item.summaries[0].short_summary%></h3>
       <form action="/notes" method="post">
         <input hidden name="book-id" value="<%=item.id%>">
         <h3 class="read-notes" onclick="this.closest('form').submit();" style="cursor: pointer;">Read my notes</h3>

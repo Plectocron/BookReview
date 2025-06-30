@@ -38,7 +38,8 @@ async function getBookRows() {
     return bookRows
 
   } catch(error) {
-    console.log(`Error caught: ${error}`);
+    console.error("Error caught:", JSON.stringify(error, null, 2));
+    return [];
   }
 }
 
@@ -48,7 +49,7 @@ async function getBook(id) {
     const book = books.find(book => book.id == id);
     return book
   } catch (error) {
-    console.log(`Error caught: ${error}`);
+    console.error("Error caught:", JSON.stringify(error, null, 2));
   }
 }
 

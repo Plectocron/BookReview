@@ -1,8 +1,7 @@
-# BookReview
+## 🛠 Built With
+- **Backend:** Node.js, Express.js, EJS
+- **Frontend:** CSS
+- **Database:** PostgreSQL (via Supabase)
+- **Hosting:** Render
 
-Techs Used: NodeJS, ExpressJS, EJS, CSS
-DB: PostgreSQL (hosted on Supabase)
-Web Host: Render
-
-Tiny summary but detailed notes for every book that I've read. The database will constantly update as I read more.
-Check it out: https://bookreview-ueqq.onrender.com/?
+Check it out 👉 [bookreview-ueqq.onrender.com](https://bookreview-ueqq.onrender.com)

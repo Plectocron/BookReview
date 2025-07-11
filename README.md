@@ -1,4 +1,4 @@
-## 🛠 Built With
+## Built With
 - **Backend:** Node.js, Express.js, EJS
 - **Frontend:** CSS
 - **Database:** PostgreSQL (via Supabase)
